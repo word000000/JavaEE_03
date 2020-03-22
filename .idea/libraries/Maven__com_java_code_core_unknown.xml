@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.java.code:core:unknown">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/java/code/core/unknown/core-unknown.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/java/code/core/unknown/core-unknown-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/java/code/core/unknown/core-unknown-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
