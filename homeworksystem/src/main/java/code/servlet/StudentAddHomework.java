@@ -1,6 +1,7 @@
 package code.servlet;
 
-import code.jdbc.HomeworkJdbc;
+import code.jdbc.StudentHomeworkJdbc;
+import code.jdbc.TeacherHomeworkJdbc;
 import code.model.StudentHomework;
 
 import javax.servlet.ServletException;
@@ -33,7 +34,7 @@ public class StudentAddHomework extends HttpServlet {
 
         resp.setContentType("text/html;charset=UTF-8");
         try {
-            resp.getWriter().println(HomeworkJdbc.handHomework(nsh)+",3s后跳转");
+            resp.getWriter().println(StudentHomeworkJdbc.handHomework(nsh)+",3s后跳转");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }

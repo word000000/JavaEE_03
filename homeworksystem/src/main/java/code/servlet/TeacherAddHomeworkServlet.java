@@ -1,6 +1,6 @@
 package code.servlet;
 
-import code.jdbc.HomeworkJdbc;
+import code.jdbc.TeacherHomeworkJdbc;
 import code.model.TeacherHomework;
 
 import javax.servlet.ServletException;
@@ -28,7 +28,7 @@ public class TeacherAddHomeworkServlet extends HttpServlet {
         nth.setHomeworkTitle(req.getParameter("homeworktitle"));
         List<TeacherHomework> thList = null;
         try {
-            thList = HomeworkJdbc.selectAllTeacherHomework();
+            thList = TeacherHomeworkJdbc.selectAllTeacherHomework();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -50,7 +50,7 @@ public class TeacherAddHomeworkServlet extends HttpServlet {
                 if(nth.getHomeworkTitle().equals("")){
                     resp.getWriter().println("id不为空，请检查后再添加,3s后跳转");
                 }else{
-                    if(HomeworkJdbc.addHomework(nth)){
+                    if(TeacherHomeworkJdbc.addHomework(nth)){
                         resp.getWriter().println("添加成功,3s后跳转");
                     }else {
                         resp.getWriter().println("添加失败，请检查后再添加,3s后跳转");

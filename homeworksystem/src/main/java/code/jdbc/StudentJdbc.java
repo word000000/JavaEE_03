@@ -14,15 +14,15 @@ import java.util.List;
  */
 public class StudentJdbc {
     public static List<Student> selectAllStudent() throws ClassNotFoundException {
-        String url="jdbc:mysql://127.0.0.1:3306/javaee?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8";
-
-        String drivername = "com.mysql.cj.jdbc.Driver";
+//        String url="jdbc:mysql://127.0.0.1:3306/javaee?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8";
+//
+//        String drivername = "com.mysql.cj.jdbc.Driver";
 
         String sqlString = "select * from student ";
 
         List<Student>list=new ArrayList<>();
-        Class.forName(drivername);//可以省略
-        try (Connection connection = DriverManager.getConnection(url, "root", "0016")) {
+//        Class.forName(drivername);//可以省略
+        try (Connection connection = (Connection) DataBasePool.getHikariDataSource()) {
             //通过连接获取statement
             try (Statement statement = connection.createStatement()) {
                 //statement （增、删、改、查）
@@ -44,12 +44,12 @@ public class StudentJdbc {
     }
 
     public static boolean addStudent(Student newStudent) throws ClassNotFoundException {
-        String url="jdbc:mysql://127.0.0.1:3306/javaee?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8";
-        String drivername = "com.mysql.cj.jdbc.Driver";
+//        String url="jdbc:mysql://127.0.0.1:3306/javaee?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8";
+//        String drivername = "com.mysql.cj.jdbc.Driver";
         List<Student>list=new ArrayList<>();
-        Class.forName(drivername);//可以省略
+//        Class.forName(drivername);//可以省略
         boolean isSuccess = true;
-        try (Connection connection = DriverManager.getConnection(url, "root", "0016")) {
+        try (Connection connection = (Connection) DataBasePool.getHikariDataSource()) {
             //通过连接获取statement
 
                 //Preparestatement （增、删、改、查）

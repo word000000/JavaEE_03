@@ -2,7 +2,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="code.model.TeacherHomework" %>
 <%@ page import="code.servlet.TeacherSearchServlet" %>
-<%@ page import="code.jdbc.HomeworkJdbc" %><%--
+<%@ page import="code.jdbc.TeacherHomeworkJdbc" %><%--
   Created by IntelliJ IDEA.
   User: guoqi
   Date: 2020/3/7
@@ -24,7 +24,7 @@
         <td align="center">作业标题</td>
     </tr>
     <%
-        List<TeacherHomework> tlist = HomeworkJdbc.selectAllTeacherHomework();
+        List<TeacherHomework> tlist = TeacherHomeworkJdbc.selectAllTeacherHomework();
         if(null == tlist||tlist.size()<=0){
             out.println("None data.");
         }else{

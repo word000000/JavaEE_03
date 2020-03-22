@@ -7,7 +7,7 @@ package code.servlet;
  * @Modifyed_By:
  */
 
-import code.jdbc.HomeworkJdbc;
+import code.jdbc.TeacherHomeworkJdbc;
 import code.model.TeacherHomework;
 
 import javax.servlet.ServletException;
@@ -30,7 +30,7 @@ public class TeacherHomeworkServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<TeacherHomework> teacherHomeworkList = null;
         try {
-            teacherHomeworkList = HomeworkJdbc.selectAllTeacherHomework();
+            teacherHomeworkList = TeacherHomeworkJdbc.selectAllTeacherHomework();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }

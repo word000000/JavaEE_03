@@ -1,6 +1,7 @@
 package code.servlet;
 
-import code.jdbc.HomeworkJdbc;
+import code.jdbc.StudentHomeworkJdbc;
+import code.jdbc.TeacherHomeworkJdbc;
 import code.model.StudentHomework;
 import code.model.TeacherHomework;
 
@@ -25,8 +26,8 @@ public class TeacherSearchServlet extends HttpServlet {
         List<StudentHomework> studentHomeworkList = null;
         List<TeacherHomework> teacherHomeworkList = null;
         try {
-            studentHomeworkList = HomeworkJdbc.selectAllStudentHomework();
-            teacherHomeworkList = HomeworkJdbc.selectAllTeacherHomework();
+            studentHomeworkList = StudentHomeworkJdbc.selectAllStudentHomework();
+            teacherHomeworkList = TeacherHomeworkJdbc.selectAllTeacherHomework();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
