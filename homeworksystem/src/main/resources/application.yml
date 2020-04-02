@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    username: root
+    password: 030016
+    url: jdbc:mysql://127.0.0.1:3306/javaee?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.jdbc.Driver

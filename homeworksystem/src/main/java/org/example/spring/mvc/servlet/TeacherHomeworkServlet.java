@@ -1,0 +1,41 @@
+package org.example.spring.mvc.servlet;
+
+/**
+ * @Author:GQM
+ * @Date:created in 13:02 2020/3/8
+ * @Description:
+ * @Modifyed_By:
+ */
+
+import org.example.spring.mvc.jdbc.TeacherHomeworkJdbc;
+import org.example.spring.mvc.model.TeacherHomework;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.List;
+
+/**
+ * @Author:GQM
+ * @Date:created in 18:28 2020/3/7
+ * @Description:
+ * @Modifyed_By:
+ */
+@WebServlet("/searchteacherhomework")
+public class TeacherHomeworkServlet extends HttpServlet {
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        List<TeacherHomework> teacherHomeworkList = null;
+        try {
+            teacherHomeworkList = TeacherHomeworkJdbc.selectAllTeacherHomework();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        req.setAttribute("teacherhomeworklist",teacherHomeworkList);
+        req.getRequestDispatcher("addhomework.jsp").forward(req,resp);
+    }
+
+}

@@ -1,5 +1,5 @@
-<%@ page import="code.model.TeacherHomework" %>
-<%@ page import="code.jdbc.TeacherHomeworkJdbc" %>
+<%@ page import="org.example.spring.mvc.model.TeacherHomework" %>
+<%@ page import="org.example.spring.mvc.jdbc.TeacherHomeworkJdbc" %>
 <%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: guoqi

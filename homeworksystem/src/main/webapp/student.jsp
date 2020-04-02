@@ -1,4 +1,4 @@
-<%@ page import="code.model.Student" %>
+<%@ page import="org.example.spring.mvc.model.Student" %>
 <%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: guoqi

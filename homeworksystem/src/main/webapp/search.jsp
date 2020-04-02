@@ -1,8 +1,8 @@
-<%@ page import="code.model.StudentHomework" %>
+<%@ page import="org.example.spring.mvc.model.StudentHomework" %>
 <%@ page import="java.util.List" %>
-<%@ page import="code.model.TeacherHomework" %>
-<%@ page import="code.servlet.TeacherSearchServlet" %>
-<%@ page import="code.jdbc.TeacherHomeworkJdbc" %><%--
+<%@ page import="org.example.spring.mvc.model.TeacherHomework" %>
+<%@ page import="org.example.spring.mvc.servlet.TeacherSearchServlet" %>
+<%@ page import="org.example.spring.mvc.jdbc.TeacherHomeworkJdbc" %><%--
   Created by IntelliJ IDEA.
   User: guoqi
   Date: 2020/3/7
